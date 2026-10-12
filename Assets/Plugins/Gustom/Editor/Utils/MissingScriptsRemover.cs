@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
-namespace Gustom.Editor.Utils
+namespace Gustom.Editor
 {
     public static class MissingScriptsRemover
     {

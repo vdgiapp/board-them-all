@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEditor;
 
-namespace Gustom.Editor.Utils
+namespace Gustom.Editor
 {
 #if UNITY_6000_0_OR_NEWER
     public static class ReserializeAllAssets

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -51,7 +51,7 @@ namespace Game
                     GameDatabase loaded = Resources.Load<GameDatabase>(nameof(GameDatabase));
                     if (!loaded)
                     {
-                        Debug.LogWarning($"[{nameof(GameDatabase)}] No database asset found. In the Project window, go to 'Create > Game > Game Database' to create one (it must be named 'GameDatabase' and sit inside a 'Resources' folder).");
+                        Debug.LogWarning("No database asset found. In the Project window, go to 'Create > Game > Game Database' to create one (it must be named 'GameDatabase' and sit inside a 'Resources' folder).");
                         return null;
                     }
                     instance = loaded;

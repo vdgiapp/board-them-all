@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: fdff86df2971e5972bcaa11c6c8e1552
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - audioMixer: {fileID: 24100000, guid: ded6c5876617f2a42a76797afdcd50f7, type: 2}
+  - musicMixerGroup: {fileID: -4104800793508814270, guid: ded6c5876617f2a42a76797afdcd50f7,
+      type: 2}
+  - soundMixerGroup: {fileID: -4707661862757399848, guid: ded6c5876617f2a42a76797afdcd50f7,
+      type: 2}
+  - <poolTransform>k__BackingField: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

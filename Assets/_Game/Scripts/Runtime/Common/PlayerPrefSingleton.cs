@@ -46,7 +46,7 @@ namespace Game
     /// </summary>
     /// <typeparam name="T">The concrete singleton class (curiously recurring). Needs a public parameterless constructor.</typeparam>
     /// <typeparam name="TData">The persisted data type.</typeparam>
-    public abstract class PlayerPrefSingleton<T, TData> where T : PlayerPrefSingleton<T, TData>, new() where TData : CachedData, new()
+    public abstract class PlayerPrefSingleton<T, TData> where T : PlayerPrefSingleton<T, TData>, new() where TData : PlayerPrefCachedData, new()
     {
         private static T instance;
         public static T Instance
@@ -187,7 +187,7 @@ namespace Game
         private void HandleNewMonth(in EventTimerNewMonth _) => OnNextMonth();
 
         /// <summary>
-        /// Called when no save exists, after <see cref="CachedData.OnNewData"/>. Fill in defaults here.
+        /// Called when no save exists, after <see cref="PlayerPrefCachedData.OnNewData"/>. Fill in defaults here.
         /// </summary>
         protected virtual void OnNewData() { }
 
@@ -218,7 +218,7 @@ namespace Game
     /// <summary>
     /// Base class of the data persisted by a <see cref="PlayerPrefSingleton{T, TData}"/>. Must be JSON-serializable.
     /// </summary>
-    public abstract class CachedData
+    public abstract class PlayerPrefCachedData
     {
         /// <summary>Called once when no save exists. Fill in default values.</summary>
         public abstract void OnNewData();

@@ -13,7 +13,7 @@ namespace Gustom.References
     /// Wrapper for a folder asset inside a Resources directory.
     /// </summary>
     [Serializable]
-    public class ResourcesFolderReference : ISerializationCallbackReceiver
+    public class ResourceFolderReference : ISerializationCallbackReceiver
     {
 #if UNITY_EDITOR
         [SerializeField] private UnityObject _folderObject;
@@ -128,12 +128,12 @@ namespace Gustom.References
         }
 #endif
 
-        public static implicit operator string(ResourcesFolderReference resourcesFolderReference) => resourcesFolderReference.Path;
+        public static implicit operator string(ResourceFolderReference resourceFolderReference) => resourceFolderReference.Path;
     }
 
     #region Property Drawer
 #if UNITY_EDITOR
-    [CustomPropertyDrawer(typeof(ResourcesFolderReference))]
+    [CustomPropertyDrawer(typeof(ResourceFolderReference))]
     public class ResourcesFolderReferencePropertyDrawer : PropertyDrawer
     {
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
@@ -152,7 +152,7 @@ namespace Gustom.References
             {
                 if (selectedObject != null)
                 {
-                    if (ResourcesFolderReference.IsAssetInResourcesFolder(selectedObject))
+                    if (ResourceFolderReference.IsAssetInResourcesFolder(selectedObject))
                     {
                         folderAssetProperty.objectReferenceValue = selectedObject;
                     }

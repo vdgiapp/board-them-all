@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 
-namespace Gustom.Editor.Utils
+namespace Gustom.Editor
 {
     public sealed class CustomEditorCoroutine
     {
