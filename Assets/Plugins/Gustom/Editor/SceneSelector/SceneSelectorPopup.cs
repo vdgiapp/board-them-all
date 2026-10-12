@@ -382,14 +382,26 @@ namespace Gustom.Editor
             string sceneInfo = isActiveScene ? "[active]" : isLoaded ? "[loaded]" : scene.Folder;
             if (!string.IsNullOrEmpty(sceneInfo)) GUI.Label(infoRect, sceneInfo, GetRightInfoStyle());
 
-            searchIconStyle ??= new GUIStyle(EditorStyles.iconButton)
+            // searchIconStyle ??= new GUIStyle(EditorStyles.iconButton)
+            // {
+            //     alignment = TextAnchor.MiddleCenter,
+            // };
+            //
+            // if (hover && GUI.Button(pingRect, EditorGUIUtility.IconContent("Search Icon"), searchIconStyle))
+            // {
+            //     EditorGUIUtility.PingObject(AssetDatabase.LoadAssetAtPath<SceneAsset>(scene.Path));
+            // }
+            
+            if (hover)
             {
-                alignment = TextAnchor.MiddleCenter
-            };
+                GUIContent searchIcon = EditorGUIUtility.IconContent("Search Icon");
+                GUI.DrawTexture(pingRect, searchIcon.image, ScaleMode.ScaleToFit);
 
-            if (hover && GUI.Button(pingRect, EditorGUIUtility.IconContent("Search Icon"), searchIconStyle))
-            {
-                EditorGUIUtility.PingObject(AssetDatabase.LoadAssetAtPath<SceneAsset>(scene.Path));
+                if (currentEvent.type == EventType.MouseDown && currentEvent.button == 0 && pingRect.Contains(currentEvent.mousePosition))
+                {
+                    EditorGUIUtility.PingObject(AssetDatabase.LoadAssetAtPath<SceneAsset>(scene.Path));
+                    currentEvent.Use();
+                }
             }
 
             if (currentEvent.type == EventType.ContextClick && rowRect.Contains(currentEvent.mousePosition))
