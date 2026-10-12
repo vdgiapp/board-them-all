@@ -1,4 +1,7 @@
-﻿using System;
+﻿#if UNITY_6000_3_OR_NEWER
+
+#else
+using System;
 using System.Reflection;
 using UnityEditor;
 using UnityEngine;
@@ -119,3 +122,4 @@ namespace Gustom.Editor
         }
     }
 }
+#endif

@@ -1,10 +1,9 @@
-#if UNITY_EDITOR
+#if UNITY_6000_0_OR_NEWER
 using UnityEngine;
 using UnityEditor;
 
 namespace Gustom.Editor
 {
-#if UNITY_6000_0_OR_NEWER
     public static class ReserializeAllAssets
     {
         [MenuItem("Assets/Force Reserialize All Assets")]
@@ -19,6 +18,5 @@ namespace Gustom.Editor
             }
         }
     }
-#endif
 }
 #endif

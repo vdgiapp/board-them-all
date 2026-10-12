@@ -1,4 +1,3 @@
-#if UNITY_EDITOR
 using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
@@ -13,30 +12,24 @@ namespace Gustom.Editor
         [MenuItem("GameObject/Remove Missing Scripts")]
         private static void FindAndRemoveMissingInSelected()
         {
-            if (Mathf.Approximately(Time.unscaledTime, _lastCallTime)) 
-                return;
+            if (Mathf.Approximately(Time.unscaledTime, _lastCallTime)) return;
 
-            var selected = Selection.gameObjects.SelectMany(go => go.GetComponentsInChildren<Transform>(true)).Select(t => t.gameObject);
-            var prefabs = new HashSet<Object>();
-            var affectedGameObjects = new List<GameObject>();
+            IEnumerable<GameObject> selected = Selection.gameObjects.SelectMany(go => go.GetComponentsInChildren<Transform>(true)).Select(t => t.gameObject);
+            HashSet<Object> prefabs = new();
+            List<GameObject> affectedGameObjects = new();
 
-            var removedComponentsCount = 0;
-            var removedGameObjectsCount = 0;
+            int removedComponentsCount = 0;
+            int removedGameObjectsCount = 0;
 
-            foreach (var gameObject in selected)
+            foreach (GameObject gameObject in selected)
             {
-                var count = GameObjectUtility.GetMonoBehavioursWithMissingScriptCount(gameObject);
-
-                if (count == 0)
-                    continue;
-
+                int count = GameObjectUtility.GetMonoBehavioursWithMissingScriptCount(gameObject);
+                if (count == 0) continue;
                 if (PrefabUtility.IsPartOfAnyPrefab(gameObject))
                 {
                     RecursivePrefabSource(gameObject, prefabs, ref removedComponentsCount, ref removedGameObjectsCount);
                     count = GameObjectUtility.GetMonoBehavioursWithMissingScriptCount(gameObject);
-
-                    if (count == 0)
-                        continue;
+                    if (count == 0) continue;
                 }
 
                 Undo.RegisterCompleteObjectUndo(gameObject, "Remove missing scripts");
@@ -47,26 +40,20 @@ namespace Gustom.Editor
                 removedGameObjectsCount += 1;
             }
 
-            if (removedGameObjectsCount == 0)
-                Debug.Log("There is no selected game objects with missing scripts.");
-            else
-                Debug.Log($"Removed {removedComponentsCount} missing scripts from {removedGameObjectsCount} game objects." +
-                          $"\nGame objects: {string.Join(", ", affectedGameObjects.Select(go => go.name))}.");
+            if (removedGameObjectsCount == 0) Debug.LogWarning("There is no selected game objects with missing scripts.");
+            else Debug.Log($"Removed {removedComponentsCount} missing scripts from {removedGameObjectsCount} game objects." + $"\nGame objects: {string.Join(", ", affectedGameObjects.Select(go => go.name))}.");
 
             _lastCallTime = Time.unscaledTime;
         }
 
         private static void RecursivePrefabSource(GameObject instance, HashSet<Object> prefabs, ref int removedComponentsCount, ref int removedGameObjectsCount)
         {
-            var source = PrefabUtility.GetCorrespondingObjectFromSource(instance);
+            GameObject source = PrefabUtility.GetCorrespondingObjectFromSource(instance);
 
-            if (source == null || !prefabs.Add(source))
-                return;
-
+            if (!source || !prefabs.Add(source)) return;
             RecursivePrefabSource(source, prefabs, ref removedComponentsCount, ref removedGameObjectsCount);
 
-            var count = GameObjectUtility.GetMonoBehavioursWithMissingScriptCount(source);
-
+            int count = GameObjectUtility.GetMonoBehavioursWithMissingScriptCount(source);
             if (count > 0)
             {
                 Undo.RegisterCompleteObjectUndo(source, "Remove missing scripts");
@@ -78,4 +65,3 @@ namespace Gustom.Editor
         }
     }
 }
-#endif
