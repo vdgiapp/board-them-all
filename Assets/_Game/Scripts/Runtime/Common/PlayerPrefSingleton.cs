@@ -74,6 +74,12 @@ namespace Game
         public virtual string GetKeyData() => typeof(T).Name;
 
         /// <summary>
+        /// Current schema version of <typeparamref name="TData"/>. Increase it whenever the saved format changes,
+        /// and handle the old versions in <see cref="OnMigrate"/>.
+        /// </summary>
+        protected virtual int GetCurrentVersion() => 1;
+
+        /// <summary>
         /// The loaded data. Valid only after <see cref="Initialize"/>.
         /// </summary>
         protected TData cachedData;
@@ -91,16 +97,22 @@ namespace Game
         {
             if (_isInitialized) return;
             _isInitialized = true;
-
+            
             cachedData = Load();
             if (cachedData == null)
             {
                 cachedData = new TData();
+                cachedData.Version = GetCurrentVersion();
                 cachedData.OnNewData();
                 OnNewData();
                 SaveData();
             }
-
+            else if (cachedData.Version < GetCurrentVersion())
+            {
+                OnMigrate(cachedData.Version);
+                cachedData.Version = GetCurrentVersion();
+                SaveData();
+            }
             cachedData.FirstTimeInit();
             PlayerPrefSingletonInitQueue.Enqueue(RunInitHooks);
         }
@@ -195,6 +207,12 @@ namespace Game
         /// Called once during <see cref="Initialize"/>, after the data is ready and before <see cref="OnInitSuccess"/>.
         /// </summary>
         protected virtual void FirstTimeInit() { }
+        
+        /// <summary>
+        /// Called once when the loaded save is older than <see cref="GetCurrentVersion"/>.
+        /// Upgrade <see cref="cachedData"/> in place. The version is stamped and saved afterwards.
+        /// </summary>
+        protected virtual void OnMigrate(int fromVersion) { }
 
         /// <summary>Called at the end of <see cref="Initialize"/>.</summary>
         protected virtual void OnInitSuccess() { }
@@ -220,7 +238,14 @@ namespace Game
     /// </summary>
     public abstract class PlayerPrefCachedData
     {
-        /// <summary>Called once when no save exists. Fill in default values.</summary>
+        /// <summary>
+        /// Schema version of the saved data. Managed by <see cref="PlayerPrefSingleton{T, TData}"/>; don't set it manually.
+        /// </summary>
+        public int Version;
+        
+        /// <summary>
+        /// Called once when no save exists. Fill in default values.
+        /// </summary>
         public abstract void OnNewData();
 
         /// <summary>

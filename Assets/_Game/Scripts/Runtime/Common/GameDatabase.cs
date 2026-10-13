@@ -158,7 +158,7 @@ namespace Game
         /// Otherwise creates one in the selected folder if that folder is named <c>Resources</c>,
         /// or at <c>Assets/Resources/GameDatabase.asset</c>. Then runs <see cref="Sync"/>.
         /// </summary>
-        [MenuItem("Assets/Create/Game/Game Database")]
+        [MenuItem("Assets/Create/Game/Game Database", priority = 0)]
         public static void CreateOrFindScriptableObject()
         {
             GameDatabase asset = null;
