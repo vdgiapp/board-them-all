@@ -1,8 +1,9 @@
 #if UNITY_EDITOR
+using Gustom.References;
 using UnityEditor;
 using UnityEngine;
 
-namespace Gustom.References
+namespace Gustom.Editor
 {
     [CustomPropertyDrawer(typeof(SceneReference))]
     public class SceneReferencePropertyDrawer : PropertyDrawer

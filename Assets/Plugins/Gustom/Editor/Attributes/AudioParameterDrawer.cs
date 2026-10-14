@@ -1,10 +1,11 @@
 #if UNITY_EDITOR
 using System.Collections.Generic;
+using Gustom.Attributes;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Audio;
 
-namespace Gustom.Attributes
+namespace Gustom.Editor
 {
     [CustomPropertyDrawer(typeof(AudioParameterAttribute))]
     public class AudioParameterDrawer : PropertyDrawer

@@ -1,9 +1,10 @@
 #if UNITY_EDITOR
 using System.IO;
+using Gustom.References;
 using UnityEditor;
 using UnityEngine;
 
-namespace Gustom.References
+namespace Gustom.Editor
 {
     [CustomPropertyDrawer(typeof(FolderReference))]
     public class FolderReferenceDrawer : PropertyDrawer

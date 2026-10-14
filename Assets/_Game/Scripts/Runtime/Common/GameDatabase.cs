@@ -30,10 +30,14 @@ namespace Game
     /// </summary>
     public sealed class GameDatabase : ScriptableObject
     {
-        /// <summary>Registered modules. Filled by editor <see cref="Sync"/>; read-only in the Inspector.</summary>
+        /// <summary>
+        /// Registered modules. Filled by editor <see cref="Sync"/>; read-only in the Inspector.
+        /// </summary>
         [SerializeField] private List<ScriptableObject> dataModules = new();
 
-        /// <summary>Type-to-module map built lazily from <see cref="dataModules"/>.</summary>
+        /// <summary>
+        /// Type-to-module map built lazily from <see cref="dataModules"/>.
+        /// </summary>
         private Dictionary<Type, ScriptableObject> _lookup;
 
         private static GameDatabase instance;
