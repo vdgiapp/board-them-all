@@ -1,7 +1,5 @@
 {
   "dependencies": {
-    "com.bgtools.playerprefseditor": "https://github.com/Dysman/bgTools-playerPrefsEditor.git#upm",
-    "com.dbrizov.naughtyattributes": "https://github.com/dbrizov/NaughtyAttributes.git#upm",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.addressables": "2.10.3",
     "com.unity.cinemachine": "3.1.7",
@@ -18,7 +16,6 @@
     "com.unity.timeline": "1.8.13",
     "com.unity.ugui": "2.0.0",
     "me.giapp.gustom": "https://github.com/vdgiapp/gustom.git#upm",
-    "xyz.candycoded.hapticfeedback": "https://github.com/CandyCoded/HapticFeedback.git#v1.0.3",
     "com.unity.modules.accessibility": "1.0.0",
     "com.unity.modules.adaptiveperformance": "1.0.0",
     "com.unity.modules.ai": "1.0.0",

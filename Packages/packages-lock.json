@@ -1,19 +1,5 @@
 {
   "dependencies": {
-    "com.bgtools.playerprefseditor": {
-      "version": "https://github.com/Dysman/bgTools-playerPrefsEditor.git#upm",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "e7cc815ce6a2a213f889756cdcb8f9c166651cd4"
-    },
-    "com.dbrizov.naughtyattributes": {
-      "version": "https://github.com/dbrizov/NaughtyAttributes.git#upm",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "b11d62b28c5fcbe242988f9f8d451deb925cf23b"
-    },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
       "depth": 0,
@@ -291,15 +277,6 @@
       "source": "git",
       "dependencies": {},
       "hash": "1d21814b7b8dfa266bd3ae3b1e0e2a1bd2a2eb08"
-    },
-    "xyz.candycoded.hapticfeedback": {
-      "version": "https://github.com/CandyCoded/HapticFeedback.git#v1.0.3",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {
-        "com.unity.modules.androidjni": "1.0.0"
-      },
-      "hash": "4597a0376eafedee647bc3a02c6b574c309f3fa7"
     },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",
