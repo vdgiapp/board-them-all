@@ -21,13 +21,13 @@ namespace Game.Manager
         [SerializeField] private float musicFadeOutTime = 0.5f;
         
         [AudioParameter(nameof(audioMixer))]
-        [SerializeField] private string masterAudioParameter = "MasterVolume";
+        [SerializeField] private string masterAudioParameter = "masterVolume";
         
         [AudioParameter(nameof(audioMixer))]
-        [SerializeField] private string musicAudioParameter = "MusicVolume";
+        [SerializeField] private string musicAudioParameter = "musicVolume";
         
         [AudioParameter(nameof(audioMixer))]
-        [SerializeField] private string soundAudioParameter = "SoundVolume";
+        [SerializeField] private string soundAudioParameter = "soundVolume";
         
         [Header("References")]
         [SerializeField] private AudioMixer audioMixer;

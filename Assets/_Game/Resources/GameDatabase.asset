@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: GameDatabase
   m_EditorClassIdentifier: 
   dataModules:
-  - {fileID: 11400000, guid: b9b7e00b33e892d4daf04fc92ff08145, type: 2}
+  - {fileID: 11400000, guid: 9678632b0fe119563a6afe47e77f0d1f, type: 2}

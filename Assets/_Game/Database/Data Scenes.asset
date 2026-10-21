@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2053aae9d7f48e581c673751517cc96, type: 3}
+  m_Name: Data Scenes
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Database.DataScenes
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  <essentials>k__BackingField:
+    _sceneObject: {fileID: 102900000, guid: 6e70a4bf4b852ab4da277c8fda808bad, type: 3}
+    _path: Assets/_Game/Scenes/Essentials.unity
+  <loadScene>k__BackingField:
+    _sceneObject: {fileID: 102900000, guid: 77dd61e8d324682ec9b740e8a5ec5a34, type: 3}
+    _path: Assets/_Game/Scenes/LoadScene.unity
+  <mainMenu>k__BackingField:
+    _sceneObject: {fileID: 102900000, guid: 91049d01f3d0ba9c18d0b1f783e9f9c3, type: 3}
+    _path: Assets/_Game/Scenes/MainMenu.unity
+  <gameplay>k__BackingField:
+    _sceneObject: {fileID: 102900000, guid: 3ed7ee2bddef52808a60c082a5077661, type: 3}
+    _path: Assets/_Game/Scenes/Gameplay.unity
