@@ -52,7 +52,7 @@ namespace Game.Manager
             while (!breakOneSecondLoop)
             {
                 yield return CoroutineUtils.WaitRealtime(1f);
-                if (Initialized) EventBus<EventTimerNewSecond>.Emit(default);
+                if (Initialized) TigerForge.EventManager.EmitEvent(Constant.EVENT_ON_NEW_SECOND);
             }
             if (oneSecondLoopCoroutine != null)
             {
