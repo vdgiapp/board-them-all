@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 29774529}
   - component: {fileID: 29774530}
   m_Layer: 5
-  m_Name: Main Navigation Tab_4
+  m_Name: Quest Nav Tab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -164,9 +164,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 29774528}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9df594dc80134d20b5e23ad5a7dd4c59, type: 3}
+  m_Script: {fileID: 11500000, guid: 70f185503cf946a98bcc7d95c99127e1, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Game.UI.MainMenu.NavigationTab
+  m_EditorClassIdentifier: Assembly-CSharp::Game.UI.MainMenu.HomeNavTab
 --- !u!1 &144200816
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,6 +622,7 @@ MonoBehaviour:
     tab: {fileID: 1106095788}
   - button: {fileID: 2135954622130399312}
     tab: {fileID: 29774530}
+  initialNavigationIndex: 2
 --- !u!1 &1077182989
 GameObject:
   m_ObjectHideFlags: 0
@@ -686,7 +687,7 @@ GameObject:
   - component: {fileID: 1106095787}
   - component: {fileID: 1106095788}
   m_Layer: 5
-  m_Name: Main Navigation Tab_3
+  m_Name: Rank Nav Tab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -720,9 +721,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1106095786}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9df594dc80134d20b5e23ad5a7dd4c59, type: 3}
+  m_Script: {fileID: 11500000, guid: 70f185503cf946a98bcc7d95c99127e1, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Game.UI.MainMenu.NavigationTab
+  m_EditorClassIdentifier: Assembly-CSharp::Game.UI.MainMenu.HomeNavTab
 --- !u!1 &1140461726
 GameObject:
   m_ObjectHideFlags: 0
@@ -734,7 +735,7 @@ GameObject:
   - component: {fileID: 1140461727}
   - component: {fileID: 1140461728}
   m_Layer: 5
-  m_Name: Main Navigation Tab_2
+  m_Name: Bag Nav Tab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -768,9 +769,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1140461726}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9df594dc80134d20b5e23ad5a7dd4c59, type: 3}
+  m_Script: {fileID: 11500000, guid: 70f185503cf946a98bcc7d95c99127e1, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Game.UI.MainMenu.NavigationTab
+  m_EditorClassIdentifier: Assembly-CSharp::Game.UI.MainMenu.HomeNavTab
 --- !u!224 &1153085617 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8412920194785890640, guid: 39e7afa772b71fce98927d22c9121fde,
@@ -969,7 +970,7 @@ GameObject:
   - component: {fileID: 1254692278}
   - component: {fileID: 1254692279}
   m_Layer: 5
-  m_Name: Main Navigation Tab_1
+  m_Name: Shop Nav Tab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1003,9 +1004,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1254692277}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9df594dc80134d20b5e23ad5a7dd4c59, type: 3}
+  m_Script: {fileID: 11500000, guid: 70f185503cf946a98bcc7d95c99127e1, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Game.UI.MainMenu.NavigationTab
+  m_EditorClassIdentifier: Assembly-CSharp::Game.UI.MainMenu.HomeNavTab
 --- !u!1001 &1399208388
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1244,7 +1245,7 @@ GameObject:
   - component: {fileID: 1693748045}
   - component: {fileID: 1693748046}
   m_Layer: 5
-  m_Name: Main Navigation Tab
+  m_Name: Home Nav Tab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1279,9 +1280,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1693748044}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9df594dc80134d20b5e23ad5a7dd4c59, type: 3}
+  m_Script: {fileID: 11500000, guid: 70f185503cf946a98bcc7d95c99127e1, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Game.UI.MainMenu.NavigationTab
+  m_EditorClassIdentifier: Assembly-CSharp::Game.UI.MainMenu.HomeNavTab
 --- !u!1 &1815129922
 GameObject:
   m_ObjectHideFlags: 0
@@ -1841,12 +1842,12 @@ PrefabInstance:
     - target: {fileID: 2358300321341891009, guid: 39e7afa772b71fce98927d22c9121fde,
         type: 3}
       propertyPath: m_text
-      value: SKIN
+      value: BAG
       objectReference: {fileID: 0}
     - target: {fileID: 3987920957139403597, guid: 39e7afa772b71fce98927d22c9121fde,
         type: 3}
       propertyPath: m_Name
-      value: Nav Skin
+      value: Nav Bag
       objectReference: {fileID: 0}
     - target: {fileID: 4040260023057517694, guid: 39e7afa772b71fce98927d22c9121fde,
         type: 3}
@@ -1857,7 +1858,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 57af9cceac80a8e4c900b8b85691094f,
+      objectReference: {fileID: 21300000, guid: f8cf6d5d8a3f1fc4ba21b55b51d05f82,
         type: 3}
     - target: {fileID: 8412920194785890640, guid: 39e7afa772b71fce98927d22c9121fde,
         type: 3}

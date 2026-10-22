@@ -2,8 +2,8 @@ using UnityEngine;
 
 namespace Game.UI.MainMenu
 {
-    public class NavigationTab : MonoBehaviour
+    public abstract class NavigationTab : MonoBehaviour
     {
-        
+        public abstract void OnActivate(bool activate);
     }
 }

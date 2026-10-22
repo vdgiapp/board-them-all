@@ -13,20 +13,23 @@ namespace Game.UI.MainMenu
         }
         
         [SerializeField] private NavigationSetting[] navigationSettings;
-
+        [SerializeField] private int initialNavigationIndex = 2;
         private int currentNavigationIndex;
 
         private void Start()
         {
-            SetNavigationTab(2);
+            SetNavigationTab(initialNavigationIndex);
         }
 
         public void SetNavigationTab(int idx)
         {
             for (int i = 0; i < navigationSettings.Length; i++)
             {
-                navigationSettings[i].button.PlayActivated(i == idx);
+                NavigationSetting s = navigationSettings[i];
+                s.button.PlayActivateAnimation(i == idx);
+                s.tab.OnActivate(i == idx);
             }
+            currentNavigationIndex = idx;
         }
     }
 }

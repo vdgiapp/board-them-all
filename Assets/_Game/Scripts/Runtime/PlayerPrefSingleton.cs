@@ -122,11 +122,7 @@ namespace Game
             if (_isDirty) SaveData(); // debounced save: at most once per second
         }
 
-        private void HandleSuspend()
-        {
-            if (_isDirty) SaveData();
-        }
-
+        private void HandleSuspend() { if (_isDirty) SaveData(); }
         private void HandleNewDay() => OnNextDay();
         private void HandleNewWeek() => OnNextWeek();
         private void HandleNewMonth() => OnNextMonth();

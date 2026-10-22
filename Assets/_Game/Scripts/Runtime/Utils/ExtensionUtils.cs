@@ -198,6 +198,20 @@ namespace Game
             }
             return new Vector2((float)sumX / positions.Count, (float)sumY / positions.Count);
         }
+
+        public static Vector2 WithX(this Vector2 vec2, float x)
+        {
+            Vector2 newOne = vec2;
+            newOne.x = x;
+            return newOne;
+        }
+        
+        public static Vector2 WithY(this Vector2 vec2, float y)
+        {
+            Vector2 newOne = vec2;
+            newOne.y = y;
+            return newOne;
+        }
 #endregion
         
 #region Color
