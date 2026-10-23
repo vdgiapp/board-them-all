@@ -29,26 +29,10 @@ namespace Game.UI.MainMenu
         {
             _activateTween?.Kill();
             _activateTween = DOTween.Sequence();
-            _activateTween.Join(
-                rectTransform.DOSizeDelta(rectTransform.sizeDelta.WithX(activate ? activatedWidth : deactivatedWidth), tweenDuration)
-                    .SetUpdate(true)
-                    .SetLink(gameObject)
-            );
-            _activateTween.Join(
-                background.DOSizeDelta(new Vector2(activate ? activatedWidth : deactivatedWidth, activate ? activatedBackgroundHeight : deactivatedBackgroundHeight), tweenDuration)
-                    .SetUpdate(true)
-                    .SetLink(gameObject)
-            );
-            _activateTween.Join(
-                main.DOAnchorPosY(activate ? activatedMainPosY : deactivatedMainPosY, tweenDuration)
-                    .SetUpdate(true)
-                    .SetLink(gameObject)
-            );
-            _activateTween.Join(
-                titleCanvasGroup.DOFade(activate ? 1f : 0f, tweenDuration)
-                    .SetUpdate(true)
-                    .SetLink(gameObject)
-            );
+            _activateTween.Insert(0f, rectTransform.DOSizeDelta(rectTransform.sizeDelta.WithX(activate ? activatedWidth : deactivatedWidth), tweenDuration));
+            _activateTween.Insert(0f, background.DOSizeDelta(new Vector2(activate ? activatedWidth : deactivatedWidth, activate ? activatedBackgroundHeight : deactivatedBackgroundHeight), tweenDuration));
+            _activateTween.Insert(0f, main.DOAnchorPosY(activate ? activatedMainPosY : deactivatedMainPosY, tweenDuration));
+            _activateTween.Insert(0f, titleCanvasGroup.DOFade(activate ? 1f : 0f, tweenDuration));
             _activateTween.SetUpdate(true).SetLink(gameObject);
         }
     }
