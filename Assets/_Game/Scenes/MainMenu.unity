@@ -267,12 +267,54 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &356846655 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7330002603066695326, guid: 39e7afa772b71fce98927d22c9121fde,
+    type: 3}
+  m_PrefabInstance: {fileID: 1935456336}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &356846659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 356846655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 3, y: 3}
+  m_UseGraphicAlpha: 1
 --- !u!224 &445269174 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8412920194785890640, guid: 39e7afa772b71fce98927d22c9121fde,
     type: 3}
   m_PrefabInstance: {fileID: 1886633836}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &457721556 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7330002603066695326, guid: 39e7afa772b71fce98927d22c9121fde,
+    type: 3}
+  m_PrefabInstance: {fileID: 2135954622130399311}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &457721560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457721556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 3, y: 3}
+  m_UseGraphicAlpha: 1
 --- !u!1 &526836061
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,6 +392,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 526836061}
   m_CullTransparentMesh: 1
+--- !u!1 &572734319 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7330002603066695326, guid: 39e7afa772b71fce98927d22c9121fde,
+    type: 3}
+  m_PrefabInstance: {fileID: 1399208388}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &572734323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572734319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 3, y: 3}
+  m_UseGraphicAlpha: 1
 --- !u!1 &978137769
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,6 +488,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 978137769}
   m_CullTransparentMesh: 1
+--- !u!1 &1018777820 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7330002603066695326, guid: 39e7afa772b71fce98927d22c9121fde,
+    type: 3}
+  m_PrefabInstance: {fileID: 1886633836}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1018777824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018777820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 3, y: 3}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1035920316
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,8 +540,8 @@ RectTransform:
   - {fileID: 1254692278}
   - {fileID: 1140461727}
   - {fileID: 1693748045}
-  - {fileID: 1106095787}
   - {fileID: 29774529}
+  - {fileID: 1106095787}
   m_Father: {fileID: 1077182990}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -590,9 +674,9 @@ MonoBehaviour:
   - button: {fileID: 1399208389}
     tab: {fileID: 1693748046}
   - button: {fileID: 1886633837}
-    tab: {fileID: 1106095788}
-  - button: {fileID: 2135954622130399312}
     tab: {fileID: 29774530}
+  - button: {fileID: 2135954622130399312}
+    tab: {fileID: 1106095788}
   initialNavigationIndex: 2
 --- !u!114 &1063888876
 MonoBehaviour:
@@ -949,11 +1033,32 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 209520596921331889, guid: 39e7afa772b71fce98927d22c9121fde,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 208
+      objectReference: {fileID: 0}
+    - target: {fileID: 209520596921331889, guid: 39e7afa772b71fce98927d22c9121fde,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 208
+      objectReference: {fileID: 0}
+    - target: {fileID: 209520596921331889, guid: 39e7afa772b71fce98927d22c9121fde,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -176
+      objectReference: {fileID: 0}
     - target: {fileID: 3987920957139403597, guid: 39e7afa772b71fce98927d22c9121fde,
         type: 3}
       propertyPath: m_Name
-      value: Nav Main
+      value: Nav Home
       objectReference: {fileID: 0}
+    - target: {fileID: 4948978582471403472, guid: 39e7afa772b71fce98927d22c9121fde,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e40891fc4862f2a479670d0094fe5488,
+        type: 3}
     - target: {fileID: 8412920194785890640, guid: 39e7afa772b71fce98927d22c9121fde,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1057,7 +1162,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7330002603066695326, guid: 39e7afa772b71fce98927d22c9121fde,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 572734323}
   m_SourcePrefab: {fileID: 100100000, guid: 39e7afa772b71fce98927d22c9121fde, type: 3}
 --- !u!114 &1399208389 stripped
 MonoBehaviour:
@@ -1239,10 +1348,25 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 209520596921331889, guid: 39e7afa772b71fce98927d22c9121fde,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 208
+      objectReference: {fileID: 0}
+    - target: {fileID: 209520596921331889, guid: 39e7afa772b71fce98927d22c9121fde,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 208
+      objectReference: {fileID: 0}
+    - target: {fileID: 209520596921331889, guid: 39e7afa772b71fce98927d22c9121fde,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -176
+      objectReference: {fileID: 0}
     - target: {fileID: 2358300321341891009, guid: 39e7afa772b71fce98927d22c9121fde,
         type: 3}
       propertyPath: m_text
-      value: RANK
+      value: QUEST
       objectReference: {fileID: 0}
     - target: {fileID: 2358300321341891009, guid: 39e7afa772b71fce98927d22c9121fde,
         type: 3}
@@ -1267,7 +1391,7 @@ PrefabInstance:
     - target: {fileID: 3987920957139403597, guid: 39e7afa772b71fce98927d22c9121fde,
         type: 3}
       propertyPath: m_Name
-      value: Nav Rank
+      value: Nav Quest
       objectReference: {fileID: 0}
     - target: {fileID: 4040260023057517694, guid: 39e7afa772b71fce98927d22c9121fde,
         type: 3}
@@ -1278,7 +1402,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 860c94823cdc5254794eaf464e8c822f,
+      objectReference: {fileID: 21300000, guid: 8a337b7029b946f4cb90edbed4b86d2a,
         type: 3}
     - target: {fileID: 8412920194785890640, guid: 39e7afa772b71fce98927d22c9121fde,
         type: 3}
@@ -1383,7 +1507,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7330002603066695326, guid: 39e7afa772b71fce98927d22c9121fde,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1018777824}
   m_SourcePrefab: {fileID: 100100000, guid: 39e7afa772b71fce98927d22c9121fde, type: 3}
 --- !u!114 &1886633837 stripped
 MonoBehaviour:
@@ -1445,15 +1573,30 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 209520596921331889, guid: 39e7afa772b71fce98927d22c9121fde,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 208
+      objectReference: {fileID: 0}
+    - target: {fileID: 209520596921331889, guid: 39e7afa772b71fce98927d22c9121fde,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 208
+      objectReference: {fileID: 0}
+    - target: {fileID: 209520596921331889, guid: 39e7afa772b71fce98927d22c9121fde,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -176
+      objectReference: {fileID: 0}
     - target: {fileID: 2358300321341891009, guid: 39e7afa772b71fce98927d22c9121fde,
         type: 3}
       propertyPath: m_text
-      value: BAG
+      value: SKIN
       objectReference: {fileID: 0}
     - target: {fileID: 3987920957139403597, guid: 39e7afa772b71fce98927d22c9121fde,
         type: 3}
       propertyPath: m_Name
-      value: Nav Bag
+      value: Nav Skin
       objectReference: {fileID: 0}
     - target: {fileID: 4040260023057517694, guid: 39e7afa772b71fce98927d22c9121fde,
         type: 3}
@@ -1462,10 +1605,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4948978582471403472, guid: 39e7afa772b71fce98927d22c9121fde,
         type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948978582471403472, guid: 39e7afa772b71fce98927d22c9121fde,
+        type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: f8cf6d5d8a3f1fc4ba21b55b51d05f82,
+      objectReference: {fileID: 21300000, guid: be39b43d7ac65964bb1af6cd10fbe289,
         type: 3}
+    - target: {fileID: 4948978582471403472, guid: 39e7afa772b71fce98927d22c9121fde,
+        type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8412920194785890640, guid: 39e7afa772b71fce98927d22c9121fde,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1569,7 +1722,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7330002603066695326, guid: 39e7afa772b71fce98927d22c9121fde,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 356846659}
   m_SourcePrefab: {fileID: 100100000, guid: 39e7afa772b71fce98927d22c9121fde, type: 3}
 --- !u!114 &1935456337 stripped
 MonoBehaviour:
@@ -1784,7 +1941,7 @@ PrefabInstance:
     - target: {fileID: 7839211351741702839, guid: 80cba15cd4018954bab256bd1013a158,
         type: 3}
       propertyPath: m_Name
-      value: Rank Nav Tab
+      value: Museum Nav Tab
       objectReference: {fileID: 0}
     - target: {fileID: 8393584550912436843, guid: 80cba15cd4018954bab256bd1013a158,
         type: 3}
@@ -2165,7 +2322,7 @@ PrefabInstance:
     - target: {fileID: 8946480120318961423, guid: c2694bd463222b047ae5116e91f76302,
         type: 3}
       propertyPath: m_Name
-      value: Bag Nav Tab
+      value: Skin Nav Tab
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2220,15 +2377,30 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 209520596921331889, guid: 39e7afa772b71fce98927d22c9121fde,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 209520596921331889, guid: 39e7afa772b71fce98927d22c9121fde,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 209520596921331889, guid: 39e7afa772b71fce98927d22c9121fde,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -176
+      objectReference: {fileID: 0}
     - target: {fileID: 2358300321341891009, guid: 39e7afa772b71fce98927d22c9121fde,
         type: 3}
       propertyPath: m_text
-      value: QUEST
+      value: MUSEUM
       objectReference: {fileID: 0}
     - target: {fileID: 3987920957139403597, guid: 39e7afa772b71fce98927d22c9121fde,
         type: 3}
       propertyPath: m_Name
-      value: Nav Quest
+      value: Nav Museum
       objectReference: {fileID: 0}
     - target: {fileID: 4040260023057517694, guid: 39e7afa772b71fce98927d22c9121fde,
         type: 3}
@@ -2239,8 +2411,13 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ea85233cd30545145850252db8971be1,
+      objectReference: {fileID: 21300000, guid: 5300fecaa339d5441be772b66ae847bb,
         type: 3}
+    - target: {fileID: 5969009447146200750, guid: 39e7afa772b71fce98927d22c9121fde,
+        type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8412920194785890640, guid: 39e7afa772b71fce98927d22c9121fde,
         type: 3}
       propertyPath: m_Pivot.x
@@ -2344,7 +2521,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7330002603066695326, guid: 39e7afa772b71fce98927d22c9121fde,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 457721560}
   m_SourcePrefab: {fileID: 100100000, guid: 39e7afa772b71fce98927d22c9121fde, type: 3}
 --- !u!114 &2135954622130399312 stripped
 MonoBehaviour:

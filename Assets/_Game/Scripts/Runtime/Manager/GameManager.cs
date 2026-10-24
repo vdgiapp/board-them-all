@@ -26,14 +26,25 @@ namespace Game.Manager
             StartCoroutine(IEInitialize());
             StartOneSecondLoop();
         }
+        
+        private void OnApplicationPause(bool paused)
+        {
+            if (paused) TigerForge.EventManager.EmitEvent(Constant.EVENT_ON_APP_SUSPEND);
+        }
+
+        private void OnApplicationQuit()
+        {
+            TigerForge.EventManager.EmitEvent(Constant.EVENT_ON_APP_SUSPEND);
+        }
 
         private IEnumerator IEInitialize()
         {
             DOTween.SetTweensCapacity(tweenersCapacity, sequencesCapacity);
             yield return null;
             _ = GameDatabase.Instance;
-            _ = PlayerConfigsPref.Instance;
             _ = CachedTimerPref.Instance;
+            _ = PlayerConfigsPref.Instance;
+            _ = PlayerResourcePref.Instance;
             yield return null;
             Initialized = true;
         }

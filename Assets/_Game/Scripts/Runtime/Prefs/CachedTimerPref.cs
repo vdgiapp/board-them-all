@@ -4,13 +4,13 @@ namespace Game
 {
     public class CachedTimerPref : PlayerPrefSingleton<CachedTimerPref, CachedTimerCachedData>
     {
+        public override int GetCurrentVersion() => 1;
+        public override string GetKeyData() => "cached_timer";
+        public override string GetKeyEvent() => Constant.EVENT_ON_CACHED_TIMER_UPDATED;
+
         public DateTime NextDay { get; private set; }
         public DateTime NextWeek { get; private set; }
         public DateTime NextMonth { get; private set; }
-
-        protected override int GetCurrentVersion() => 1;
-        public override string GetKeyData() => "cached_timer";
-        public override string GetKeyEvent() => Constant.EVENT_ON_CACHED_TIMER_UPDATED;
 
         protected override void OnInitSuccess()
         {
@@ -23,9 +23,9 @@ namespace Game
         protected override void OnNewSecond()
         {
             base.OnNewSecond();
-            if (IsNewDay()) TigerForge.EventManager.EmitEvent(Constant.EVENT_ON_NEW_DAY);
-            if (IsNewWeek()) TigerForge.EventManager.EmitEvent(Constant.EVENT_ON_NEW_WEEK);
-            if (IsNewMonth()) TigerForge.EventManager.EmitEvent(Constant.EVENT_ON_NEW_MONTH);
+            if (DateTime.UtcNow > NextDay) TigerForge.EventManager.EmitEvent(Constant.EVENT_ON_NEW_DAY);
+            if (DateTime.UtcNow > NextMonth) TigerForge.EventManager.EmitEvent(Constant.EVENT_ON_NEW_WEEK);
+            if (DateTime.UtcNow > NextMonth) TigerForge.EventManager.EmitEvent(Constant.EVENT_ON_NEW_MONTH);
         }
 
         protected override void OnNextDay()
@@ -54,21 +54,6 @@ namespace Game
             NextMonth = new DateTime(nextMonthDt.Year, nextMonthDt.Month, 1);
             cachedData.nextMonth = NextMonth.ToUnixTimestamp();
             OnValueChange();
-        }
-
-        public bool IsNewDay()
-        {
-            return DateTime.UtcNow > NextDay;
-        }
-
-        public bool IsNewWeek()
-        {
-            return DateTime.UtcNow > NextWeek;
-        }
-
-        public bool IsNewMonth()
-        {
-            return DateTime.UtcNow > NextMonth;
         }
     }
     

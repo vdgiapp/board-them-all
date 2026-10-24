@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using UnityEngine;
 using UnityEngine.UI;
 using URandom = UnityEngine.Random;
@@ -375,5 +376,24 @@ namespace Game
             return $"<color=#{ColorUtility.ToHtmlStringRGB(color)}>{str}</color>";
         }
 #endregion
+
+        public static string GetShortValueText(this long value)
+        {
+            bool isNegative = value < 0;
+            double absoluteVal = Math.Abs((double)value);
+            string[] suffixes = { "", "K", "M", "B", "T", "E", "D", "A", "X", "Y", "Z" };
+            int i = 0;
+            
+            while (absoluteVal >= 1000 && i < suffixes.Length - 1)
+            {
+                absoluteVal /= 1000;
+                i++;
+            }
+            string formatted;
+            if (i == 0) formatted = ((long)absoluteVal).ToString(CultureInfo.InvariantCulture);
+            else formatted = absoluteVal.ToString("0.00", CultureInfo.InvariantCulture);
+
+            return (isNegative ? "-" : "") + formatted + suffixes[i];
+        }
     }
 }

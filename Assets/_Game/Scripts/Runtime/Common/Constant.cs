@@ -2,6 +2,8 @@ namespace Game
 {
     public static class Constant
     {
+        public const int MAX_ENERGY = 5;
+        
         public const string EVENT_ON_APP_SUSPEND = "EVENT_ON_APP_SUSPEND";
         public const string EVENT_ON_NEW_SECOND = "EVENT_ON_NEW_SECOND";
         public const string EVENT_ON_NEW_DAY = "EVENT_ON_NEW_DAY";
@@ -10,5 +12,6 @@ namespace Game
 
         public const string EVENT_ON_CACHED_TIMER_UPDATED = "EVENT_ON_CACHED_TIMER_UPDATED";
         public const string EVENT_ON_PLAYER_CONFIGS_UPDATED = "EVENT_ON_PLAYER_CONFIGS_UPDATED";
+        public const string EVENT_ON_PLAYER_RESOURCE_UPDATED = "EVENT_ON_PLAYER_RESOURCE_UPDATED";
     }
 }

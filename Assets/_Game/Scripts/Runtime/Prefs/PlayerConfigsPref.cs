@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 
@@ -5,7 +6,7 @@ namespace Game
 {
     public class PlayerConfigsPref : PlayerPrefSingleton<PlayerConfigsPref, PlayerConfigsCachedData>
     {
-        protected override int GetCurrentVersion() => 1;
+        public override int GetCurrentVersion() => 1;
         public override string GetKeyData() => "player_configs";
         public override string GetKeyEvent() => Constant.EVENT_ON_PLAYER_CONFIGS_UPDATED;
 
@@ -43,9 +44,9 @@ namespace Game
         }
     }
 
+    [Serializable]
     public class PlayerConfigsCachedData : PlayerPrefCachedData
     {
-        [JsonProperty("configs")]
         public Dictionary<string, float> playerConfigs = new()
         {
             [nameof(EPlayerConfig.MusicEnabled)] = 1f,

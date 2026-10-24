@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Game.UI.MainMenu
 {
-    public class RankNavigationTab : NavigationTab
+    public class MuseumNavigationTab : NavigationTab
     {
         [Header("Settings")]
         [SerializeField] private float fadeTweenDuration = 0.1f;

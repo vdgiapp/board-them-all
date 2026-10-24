@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Newtonsoft.Json;
 using Sirenix.OdinSerializer;
 using UnityEngine;
 
@@ -27,9 +28,9 @@ namespace Game
             }
         }
 
-        public virtual string GetKeyData() => typeof(T).Name;
+        public abstract int GetCurrentVersion();
+        public abstract string GetKeyData();
         public abstract string GetKeyEvent();
-        protected virtual int GetCurrentVersion() => 1;
 
         protected TData cachedData;
         private bool _isInitialized;
@@ -75,17 +76,21 @@ namespace Game
         private TData Load()
         {
             string key = GetKeyData();
-            string base64Data = PlayerPrefs.GetString(key);
-            if (string.IsNullOrEmpty(base64Data)) return null;
+            //string base64Data = PlayerPrefs.GetString(key);
+            //if (string.IsNullOrEmpty(base64Data)) return null;
+            string data = PlayerPrefs.GetString(key);
+            if (string.IsNullOrEmpty(data)) return null;
             try
             {
-                byte[] bytes = System.Convert.FromBase64String(base64Data);
-                return SerializationUtility.DeserializeValue<TData>(bytes, DataFormat.Binary);
+                //byte[] bytes = System.Convert.FromBase64String(base64Data);
+                //return SerializationUtility.DeserializeValue<TData>(bytes, DataFormat.Binary);
+                return JsonConvert.DeserializeObject<TData>(data);
             }
             catch (System.Exception ex)
             {
                 Debug.LogException(ex);
-                PlayerPrefs.SetString(key + "_corrupt", base64Data); // keep a copy before it is overwritten
+                //PlayerPrefs.SetString(key + "_corrupt", base64Data); // keep a copy before it is overwritten
+                PlayerPrefs.SetString(key + "_corrupt", data); // keep a copy before it is overwritten
                 return null;
             }
         }
@@ -93,9 +98,11 @@ namespace Game
         protected void SaveData()
         {
             _isDirty = false;
-            byte[] bytes = SerializationUtility.SerializeValue(cachedData, DataFormat.Binary);
-            string base64Data = System.Convert.ToBase64String(bytes);
-            PlayerPrefs.SetString(GetKeyData(), base64Data);
+            // byte[] bytes = SerializationUtility.SerializeValue(cachedData, DataFormat.Binary);
+            // string base64Data = System.Convert.ToBase64String(bytes);
+            // PlayerPrefs.SetString(GetKeyData(), base64Data);
+            string data = JsonConvert.SerializeObject(cachedData);
+            PlayerPrefs.SetString(GetKeyData(), data);
             PlayerPrefs.Save();
         }
 
